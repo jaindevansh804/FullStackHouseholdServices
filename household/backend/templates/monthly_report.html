@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Activity Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Activity Report</h1>
+        <p>Hello {{ username }},</p>
+        <p>Here is your activity report for {{ month }}:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Activity</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Services Requested</td>
+                    <td>{{ services_requested }}</td>
+                </tr>
+                <tr>
+                    <td>Services Completed</td>
+                    <td>{{ services_completed }}</td>
+                </tr>
+                <tr>
+                    <td>Services Pending</td>
+                    <td>{{ services_pending }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Thank you for using our service!</p>
+    </div>
+</body>
+</html>
